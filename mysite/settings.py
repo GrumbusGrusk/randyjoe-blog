@@ -25,7 +25,7 @@ SECRET_KEY = '+1q&4$*!bbo%=m5z7#q@#g^3%#mix8295ld=umxlbl+u2o%znu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['randyjoehippensteele.pythonanywhere.com']
+ALLOWED_HOSTS = ['randyjoehippensteele.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -123,5 +123,3 @@ import os.path
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'blog', 'static')
-
-
