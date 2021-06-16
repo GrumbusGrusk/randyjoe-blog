@@ -120,8 +120,8 @@ USE_TZ = True
 
 import os.path
 
-STATIC_ROOT = ''
-
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATIC_ROOT = os.path.join(BASE_DIR,'blog', 'static')
+
+
