@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>List of Recordings</h1>
+<table border="1" width="60%">
+<tr>
+<td>Name</td>
+<td>Album</td>
+<td>Bandcamp</td>
+</tr>
+
+{% for music in musics %}
+<tr>
+<td>{{ music.title }}</td>
+<td>
+{{ music.album }}</td>
+<td>
+  <a href="{{ music.notes }}">Link</a>
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
