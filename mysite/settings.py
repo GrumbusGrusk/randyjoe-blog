@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

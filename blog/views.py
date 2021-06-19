@@ -6,6 +6,7 @@ from django.views.generic import CreateView
 from django.contrib.auth import authenticate, login
 from django.urls import reverse
 from .forms import CommentForm
+from .filters import OrderFilter
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -29,4 +30,6 @@ def register(request):
 
 def music(request):
     musics = Music.objects.all()
-    return render(request, 'blog/music.html', {'musics': musics})
+    myFilter = OrderFilter(request.GET, queryset=musics)
+    musics = myFilter.qs
+    return render(request, 'blog/music.html', {'musics': musics, 'myFilter':myFilter})
